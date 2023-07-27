@@ -1,4 +1,4 @@
-import { app , auth } from './../firebase.mjs'
+import { app , auth } from './firebase.mjs'
 import { signInWithEmailAndPassword  } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
 
 document.getElementById('Login').addEventListener('click' , ()=>{
@@ -14,5 +14,9 @@ document.getElementById('Login').addEventListener('click' , ()=>{
     .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        console.log(error);
+        alert("singUp is first");
+        window.location.href = './signup.html'
     })
     });
+
